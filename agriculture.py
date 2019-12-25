@@ -333,15 +333,21 @@ class Agriculture:
         if self.listener is not None:
             self.listener.onShowRgb(rgb)
 
-    def SaveResult(self):
-        geotiff = GetDriverByName('Gtiff')
-        path = "tes.tif"
-        output = geotiff.Create(path, self.output_cols,
-                                self.output_rows, 1, gdal.GDT_Float32)
-        output.SetGeoTransform(self.open_B6.GetGeoTransform())
-        output_band = output.GetRasterBand(1)
-        output_band.WriteArray(self.agricultureResult)
-        print("File created successfully.")
+    def saveAgricultureComposite(self, path):
+        rgb = self.agricultureResult
+        if self.listener is not None:
+            self.listener.onSaveRgb(rgb, path)
+
+    def SaveResult(self, plt, path, filename, extension):
+        # geotiff = GetDriverByName('Gtiff')
+        # path = "tes.tif"
+        # output = geotiff.Create(path, self.output_cols,
+        #                         self.output_rows, 1, gdal.GDT_Float32)
+        # output.SetGeoTransform(self.open_B6.GetGeoTransform())
+        # output_band = output.GetRasterBand(1)
+        # output_band.WriteArray(self.agricultureResult)
+        # print("File created successfully.")
+        plt.savefig()
 
     def norm(self, band):
         band_min, band_max = band.min(), band.max()

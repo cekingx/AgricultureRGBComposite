@@ -190,10 +190,10 @@ class MainFrame ( wx.Frame ):
 		processing.Add( self.compositeButton, 0, wx.ALL, 5 )
 		
 		
-		bSizer2.Add( processing, 0, wx.EXPAND, 5 )
+		bSizer2.Add( processing, 0, wx.EXPAND|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
 		
-		bSizer1.Add( bSizer2, 1, wx.EXPAND, 5 )
+		bSizer1.Add( bSizer2, 0, wx.EXPAND, 5 )
 		
 		bSizer3 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -204,7 +204,7 @@ class MainFrame ( wx.Frame ):
 		bSizer3.Add( self.saveButton, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		
-		bSizer1.Add( bSizer3, 1, wx.EXPAND, 5 )
+		bSizer1.Add( bSizer3, 0, wx.EXPAND, 5 )
 		
 		
 		self.SetSizer( bSizer1 )

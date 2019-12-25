@@ -2305,11 +2305,11 @@
                                 </object>
                             </object>
                         </object>
-                        <object class="sizeritem" expanded="0">
+                        <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
-                            <property name="flag">wxEXPAND</property>
+                            <property name="flag">wxEXPAND|wxALIGN_CENTER_VERTICAL</property>
                             <property name="proportion">0</property>
-                            <object class="wxStaticBoxSizer" expanded="0">
+                            <object class="wxStaticBoxSizer" expanded="1">
                                 <property name="id">wxID_ANY</property>
                                 <property name="label">Processing</property>
                                 <property name="minimum_size"></property>
@@ -2585,11 +2585,11 @@
                         </object>
                     </object>
                 </object>
-                <object class="sizeritem" expanded="0">
+                <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND</property>
                     <property name="proportion">1</property>
-                    <object class="wxBoxSizer" expanded="0">
+                    <object class="wxBoxSizer" expanded="1">
                         <property name="minimum_size"></property>
                         <property name="name">bSizer3</property>
                         <property name="orient">wxVERTICAL</property>
