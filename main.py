@@ -115,8 +115,8 @@ class MainFrame(gui.MainFrame):
         self.showMessage("Sukses RGB Composite")
 
     def onShowRgb(self, result):
-        self.agriculture.agricultureResult = result
         plt.show()
+        self.agriculture.isAgriculture = False
 
     def onSaveRgb(self, result, path):
         png = re.search("\.(png)$", path)
@@ -127,14 +127,17 @@ class MainFrame(gui.MainFrame):
             plt.savefig(path, dpi=300)
             text = path + " sukses disimpan"
             self.showMessage(text)
+            self.agriculture.isAgriculture = False
         elif jpg != None:
             plt.savefig(path, dpi=200, quality=80)
             text = path + " sukses disimpan"
             self.showMessage(text)
+            self.agriculture.isAgriculture = False
         elif tif != None:
             plt.savefig(path, dpi=300, quality=99)
             text = path + " sukses disimpan"
             self.showMessage(text)
+            self.agriculture.isAgriculture = False
 
 
 class ShowFrame(gui.ShowFrame):
